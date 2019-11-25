@@ -4,8 +4,8 @@ FROM lsiobase/python:3.10
 ARG BUILD_DATE
 ARG VERSION
 ARG MYLAR_COMMIT
-LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="sparklyballs"
+LABEL build_version="Thraxis'  version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="Thraxis"
 
 RUN \
  echo "**** install system packages ****" && \
@@ -21,10 +21,10 @@ RUN \
 	tzlocal && \
  echo "**** install app ****" && \
  if [ -z ${MYLAR_COMMIT+x} ]; then \
-	MYLAR_COMMIT=$(curl -sX GET https://api.github.com/repos/evilhero/mylar/commits/master \
+	MYLAR_COMMIT=$(curl -sX GET https://api.github.com/repos/evilhero/mylar/commits/development \
 	| awk '/sha/{print $4;exit}' FS='[""]'); \
  fi && \
- git clone https://github.com/evilhero/mylar.git /app/mylar && \
+ git clone -b development https://github.com/evilhero/mylar.git /app/mylar && \
  cd /app/mylar && \
  git checkout ${MYLAR_COMMIT} && \
  echo "**** cleanup ****" && \
