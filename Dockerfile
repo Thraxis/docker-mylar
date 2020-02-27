@@ -11,8 +11,12 @@ RUN \
  echo "**** install system packages ****" && \
  apk add --no-cache \
 	git \
+  python3 \
+  py3-pip \
 	nodejs && \
  echo "**** install pip packages ****" && \
+ ln -s /usr/bin/pip3 /usr/bin/pip && \
+ pip install --upgrade pip && \
  pip install --no-cache-dir -U \
 	comictagger==1.1.32rc1 \
 	configparser \
@@ -27,6 +31,7 @@ RUN \
  git clone -b python3-dev https://github.com/mylar3/mylar3.git /app/mylar && \
  cd /app/mylar && \
  git checkout ${MYLAR_COMMIT} && \
+ pip install -r requirements.txt && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/root/.cache \
