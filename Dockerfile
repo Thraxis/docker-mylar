@@ -1,4 +1,4 @@
-FROM lsiobase/python:3.10
+FROM lsiobase/python:3.11
 
 # set version label
 ARG BUILD_DATE
@@ -21,10 +21,10 @@ RUN \
 	tzlocal && \
  echo "**** install app ****" && \
  if [ -z ${MYLAR_COMMIT+x} ]; then \
-	MYLAR_COMMIT=$(curl -sX GET https://api.github.com/repos/evilhero/mylar/commits/development \
+	MYLAR_COMMIT=$(curl -sX GET https://api.github.com/repos//mylar3/mylar3/commits/python3-dev \
 	| awk '/sha/{print $4;exit}' FS='[""]'); \
  fi && \
- git clone -b development https://github.com/evilhero/mylar.git /app/mylar && \
+ git clone -b python3-dev https://github.com/mylar3/mylar3.git /app/mylar && \
  cd /app/mylar && \
  git checkout ${MYLAR_COMMIT} && \
  echo "**** cleanup ****" && \
