@@ -28,6 +28,7 @@ apk add --no-cache --virtual=build-dependencies \
  openssl-dev \
  libffi-dev \
  python3-dev \
+ qt5-qtbase-dev \
  tiff-dev \
  zlib-dev && \
  echo "**** install system packages ****" && \
@@ -44,6 +45,7 @@ apk add --no-cache --virtual=build-dependencies \
   openssl \
   p7zip \
   python3 \
+  qt5-qtbase \
   py3-pip \
   tar \
 	tiff \
