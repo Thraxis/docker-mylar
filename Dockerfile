@@ -27,7 +27,7 @@ apk add --no-cache --virtual=build-dependencies \
  openjpeg-dev \
  openssl-dev \
  libffi-dev \
- python3-de \
+ python3-dev \
  tiff-dev \
  zlib-dev && \
  echo "**** install system packages ****" && \
