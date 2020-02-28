@@ -45,8 +45,6 @@ apk add --no-cache --virtual=build-dependencies \
   p7zip \
   python3 \
   py3-pip \
-  py3-sip-qt5 \
-  py3-qt5\
   tar \
 	tiff \
 	unrar \
