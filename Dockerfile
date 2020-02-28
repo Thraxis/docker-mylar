@@ -45,6 +45,8 @@ apk add --no-cache --virtual=build-dependencies \
   p7zip \
   python3 \
   py3-pip \
+  py3-sip-qt5 \
+  py3-qt5\
   tar \
 	tiff \
 	unrar \
@@ -73,6 +75,24 @@ apk add --no-cache --virtual=build-dependencies \
  	requests \
  	setuptools \
  	urllib3 \
+  APScheduler \
+beautifulsoup4 \
+cfscrape \
+cheroot \
+CherryPy \
+feedparser \
+Mako \
+natsort \
+portend \
+pyinstaller \
+PyPDF2 \
+PyQt5 \
+PyQt5-sip \
+pytz \
+simplejson \
+six \
+unrar \
+unrar-cffi \
  	virtualenv && \
  echo "**** install app ****" && \
  if [ -z ${MYLAR_COMMIT+x} ]; then \
@@ -82,7 +102,6 @@ apk add --no-cache --virtual=build-dependencies \
  git clone -b python3-dev https://github.com/mylar3/mylar3.git /app/mylar && \
  cd /app/mylar && \
  git checkout ${MYLAR_COMMIT} && \
- pip install -r requirements.txt && \
  echo "**** cleanup ****" && \
  apk del --purge \
      build-dependencies && \
