@@ -52,7 +52,7 @@ apk add --no-cache --virtual=build-dependencies \
 	vnstat \
 	wget \
 	xz \
-	zlib
+	zlib \
 	nodejs && \
  echo "**** install pip packages ****" && \
  ln -s /usr/bin/pip3 /usr/bin/pip && \
@@ -87,7 +87,7 @@ apk add --no-cache --virtual=build-dependencies \
  pip install -r requirements.txt && \
  echo "**** cleanup ****" && \
  apk del --purge \
-     build-dependencies && \ 
+     build-dependencies && \
  rm -rf \
 	/root/.cache \
 	/tmp/*
