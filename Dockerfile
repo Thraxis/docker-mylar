@@ -63,7 +63,6 @@ apk add --no-cache --virtual=build-dependencies \
 	html5lib \
 	requests \
 	tzlocal \
- 	cheetah \
  	lxml \
  	ndg-httpsclient \
  	notify \
