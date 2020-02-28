@@ -45,6 +45,8 @@ apk add --no-cache --virtual=build-dependencies \
   openssl \
   p7zip \
   python3 \
+  py3-qt5 \
+  py3-sip-pyqt5 \
   qt5-qtbase \
   py3-pip \
   tar \
@@ -86,8 +88,6 @@ natsort \
 portend \
 pyinstaller \
 PyPDF2 \
-PyQt5 \
-PyQt5-sip \
 pytz \
 simplejson \
 six \
